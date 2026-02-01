@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#d14d72">
+    <title>Will You be my forever💖💖 ? 💍</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        /* ORIGINAL CSS — UNCHANGED */
+        :root {
+            --primary-color: #d14d72;
+            --secondary-color: #ff6b9d;
+            --accent-color: #ff9ec0;
+            --light-pink: #fff0f7;
+            --dark-pink: #8a5a7a;
+            --text-color: #5a3d5c;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(209,77,114,0.15);
+            --shadow-light: 0 5px 15px rgba(209,77,114,0.1);
+            --border-radius: 15px;
+        }
+
+        body{
+            margin:0;
+            font-family:Poppins,sans-serif;
+            background:linear-gradient(135deg,#f9f0ff,#fff0f7);
+            color:var(--text-color);
+        }
+
+        h1,h2,h3{
+            font-family:'Dancing Script',cursive;
+            color:var(--primary-color);
+        }
+
+        .container{
+            max-width:1200px;
+            margin:auto;
+            padding:30px;
+        }
+
+        .card{
+            background:white;
+            border-radius:15px;
+            padding:25px;
+            box-shadow:var(--shadow);
+            margin-bottom:30px;
+        }
+
+        .photo-container{
+            width:100%;
+            aspect-ratio:9/9;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        .photo-container img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .video-wrapper{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:120px;
+            background:linear-gradient(45deg,var(--accent-color),var(--light-pink));
+            border-radius:12px;
+            font-size:2rem;
+            color:var(--primary-color);
+        }
+
+        .video-controls{
+            display:flex;
+            gap:12px;
+            justify-content:center;
+            margin-top:20px;
+            flex-wrap:wrap;
+        }
+
+        .video-btn{
+            background:var(--secondary-color);
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:40px;
+            cursor:pointer;
+        }
+
+        .proposal-btn{
+            padding:18px 50px;
+            border:none;
+            border-radius:50px;
+            font-size:1.5rem;
+            cursor:pointer;
+            font-weight:600;
+        }
+
+        .yes-btn{
+            background:linear-gradient(135deg,var(--accent-color),var(--primary-color));
+            color:white;
+            
+        }
+        
+
+        .no-btn{
+            background:#eee;
+        }
+
+        .buttons-container{
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+
+        .response-message{
+            text-align:center;
+            font-size:2.3rem;
+            margin-top:25px;
+            opacity:0;
+            transition:.8s;
+            font-family:'Dancing Script',cursive;
+            color:var(--primary-color);
+        }
+
+        .response-message.show{
+            opacity:1;
+        }
+        .floating-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+overflow:hidden;
+}
+
+.floating-item{
+position:absolute;
+animation: floatUp linear infinite;
+opacity:0;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(110vh) scale(.6) rotate(0deg);
+opacity:0;
+}
+15%{opacity:.8;}
+85%{opacity:.8;}
+100%{
+transform:translateY(-120px) scale(1.2) rotate(360deg);
+opacity:0;
+}
+}
+.floating-item{
+filter: drop-shadow(0 0 8px rgba(255,105,180,.8))
+        drop-shadow(0 0 15px rgba(255,105,180,.6));
+}
+.firework{
+position:fixed;
+width:8px;
+height:8px;
+border-radius:50%;
+animation: explode 1.5s ease-out forwards;
+}
+
+@keyframes explode{
+from{transform:scale(1);opacity:1}
+to{transform:scale(25);opacity:0}
+}
+
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="floating-bg" id="floatingBg"></div>
+
+
+<div class="container">
+
+<header style="text-align:center;margin-bottom:40px">
+    <h1 id="title">For My Beautiful Girlfriend</h1>
+    <p>A special place to express my love</p>
+</header>
+
+<div class="card">
+    <div class="photo-container">
+        <img src="photo.jpg" alt="Our Photo">
+    </div>
+</div>
+
+<!-- MUSIC SECTION (replaces video functionality only) -->
+<div class="card">
+    <h3>Our Special Song 🎵</h3>
+
+    <div class="video-wrapper">
+        💖 Playing our love song 💖
+    </div>
+
+    <div class="video-controls">
+        <button class="video-btn" onclick="playMusic()">Play</button>
+        <button class="video-btn" onclick="pauseMusic()">Pause</button>
+        <button class="video-btn" onclick="toggleMute()" id="muteBtn">Mute</button>
+    </div>
+</div>
+
+<!-- Hidden Background Music -->
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+<p>
+Matlb legit jbse mili ho tum na brishti biswas tumne na  mujhe ye feel krya h ki how special im and i am really thankful for that ki tum mere saath ho 
+I really love you soo much Brishti Biswas❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️.
+</p>
+</div>
+
+<div class="card">
+
+<h2>Will you be my forever ? 💍</h2>
+
+<div class="buttons-container">
+    <button class="proposal-btn yes-btn" onclick="yes()">YES ❤️</button>
+    <button class="proposal-btn no-btn" id="noBtn" onmouseover="moveNo()">Umm...</button>
+</div>
+
+<div class="response-message" id="response"></div>
+
+</div>
+
+</div>
+
+<script>
+
+const music = document.getElementById("bgMusic");
+let muted=false;
+
+function playMusic(){
+music.play();
+}
+
+function pauseMusic(){
+music.pause();
+}
+
+function toggleMute(){
+muted=!muted;
+music.muted=muted;
+document.getElementById("muteBtn").innerText = muted ? "Unmute" : "Mute";
+}
+
+function yes(){
+document.getElementById("response").innerText =
+"You made me the happiest person alive 💕 Forever begins now!";
+document.getElementById("response").classList.add("show");
+music.play();
+fireworks();
+}
+function fireworks(){
+for(let i=0;i<30;i++){
+const f=document.createElement("div");
+f.className="firework";
+f.style.background=`hsl(${Math.random()*360},100%,70%)`;
+f.style.left=Math.random()*100+"vw";
+f.style.top=Math.random()*70+"vh";
+document.body.appendChild(f);
+setTimeout(()=>f.remove(),1500);
+}
+}
+
+
+function moveNo(){
+const btn=document.getElementById("noBtn");
+btn.style.position="relative";
+btn.style.left=Math.random()*200-100+"px";
+btn.style.top=Math.random()*80-40+"px";
+}
+
+const params=new URLSearchParams(window.location.search);
+const name=params.get("name");
+if(name){
+document.getElementById("title").innerText = `For My Beautiful ${name}`;
+}
+const bg = document.getElementById("floatingBg");
+
+function createFloating(){
+    const item = document.createElement("div");
+    item.className = "floating-item";
+
+    const symbols = ["❤️","💖","💕","💋","💘"];
+    item.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+
+    const size = Math.random()*22 + 14;
+    item.style.fontSize = size + "px";
+
+    item.style.left = Math.random()*100 + "vw";
+
+    const duration = Math.random()*2 + 10;
+    item.style.animationDuration = duration + "s";
+
+    bg.appendChild(item);
+
+    setTimeout(()=>item.remove(), duration*1000);
+}
+
+setInterval(createFloating, 350);
+
+</script>
+
+</body>
+</html>
